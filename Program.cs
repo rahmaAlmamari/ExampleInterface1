@@ -52,7 +52,12 @@
             }
         }
 
-
+        public void ApplyInterest()
+        {
+            var interest = Balance * InterestRate;
+            Balance += interest;
+            Console.WriteLine($"Applied interest of {interest:C}. New balance: {Balance:C}");
+        }
 
     }
         internal class Program
