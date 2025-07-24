@@ -79,6 +79,19 @@
             Balance += amount;
             Console.WriteLine($"Deposited {amount:C} to credit account. New balance: {Balance:C}");
         }
+
+        void IWithdrawable.Withdraw(decimal amount)
+        {
+            if (Balance + amount <= CreditLimit)
+            {
+                Balance -= amount;
+                Console.WriteLine($"Withdrew {amount:C} from credit account. New balance: { Balance: C} "); 
+            }
+            else
+            {
+                Console.WriteLine("Credit limit exceeded.");
+            }
+        }
     }
 
         internal class Program
