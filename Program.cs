@@ -19,7 +19,10 @@
         decimal InterestRate { get; set; }
         void ApplyInterest();
     }
-    internal class Program
+    //4. 
+    public class SavingsAccount : IAccount, IWithdrawable, IInterestBearing
+    { }
+        internal class Program
     {
         static void Main(string[] args)
         {
