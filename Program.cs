@@ -13,6 +13,10 @@
     {
         void Withdraw(decimal amount);
     }
+    //3. IInterestBearing interface ...
+    public interface IInterestBearing
+    {
+    }
     internal class Program
     {
         static void Main(string[] args)
