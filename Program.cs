@@ -98,7 +98,28 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("=== Savings Account Demo ===");
+            SavingsAccount savings = new SavingsAccount("SA123", 1000m, 0.05m); // 5% interest
+            savings.Deposit(200m);
+            savings.Withdraw(150m);
+            savings.ApplyInterest();
+
+            Console.WriteLine("\n=== Credit Account Demo ===");
+            CreditAccount credit = new CreditAccount("CA456", 500m); // 500 credit limit
+            credit.Deposit(300m);
+
+            // Call withdraw using interface to match explicit implementation
+            IWithdrawable creditWithdrawable = credit;
+            creditWithdrawable.Withdraw(600m); // allowed
+            creditWithdrawable.Withdraw(300m); // should fail
+
+            Console.WriteLine("\n=== Interface Polymorphism Demo ===");
+            List<IAccount> accounts = new List<IAccount> { savings, credit };
+            foreach (var account in accounts)
+            {
+                Console.WriteLine($"Account: {account.AccountNumber}, Balance: {account.Balance:C}");
+            }
         }
+
     }
 }
