@@ -19,7 +19,7 @@
         decimal InterestRate { get; set; }
         void ApplyInterest();
     }
-    //4. 
+    //4. SavingsAccount class ...
     public class SavingsAccount : IAccount, IWithdrawable, IInterestBearing
     {
         public string AccountNumber { get; private set; }
@@ -60,6 +60,12 @@
         }
 
     }
+    //5. CreditAccount class ...
+    public class CreditAccount : IAccount, IWithdrawable
+    {
+
+    }
+
         internal class Program
     {
         static void Main(string[] args)
