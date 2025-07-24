@@ -2,7 +2,8 @@
 {
     public interface IAccount
     {
-
+        string AccountNumber { get; }
+        decimal Balance { get; }
     }
     internal class Program
     {
