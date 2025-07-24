@@ -17,6 +17,7 @@
     public interface IInterestBearing
     {
         decimal InterestRate { get; set; }
+        void ApplyInterest();
     }
     internal class Program
     {
