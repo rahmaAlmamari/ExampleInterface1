@@ -73,6 +73,12 @@
             CreditLimit = creditLimit;
             Balance = -CreditLimit;
         }
+
+        public void Deposit(decimal amount)
+        {
+            Balance += amount;
+            Console.WriteLine($"Deposited {amount:C} to credit account. New balance: {Balance:C}");
+        }
     }
 
         internal class Program
