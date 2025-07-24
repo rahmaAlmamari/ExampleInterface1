@@ -25,6 +25,13 @@
         public string AccountNumber { get; private set; }
         public decimal Balance { get; private set; }
         public decimal InterestRate { get; set; }
+
+        public SavingsAccount(string accountNumber, decimal initialBalance, decimal interestRate)
+        {
+            AccountNumber = accountNumber;
+            Balance = initialBalance;
+            InterestRate = interestRate;
+        }
     }
         internal class Program
     {
