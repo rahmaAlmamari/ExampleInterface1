@@ -63,7 +63,9 @@
     //5. CreditAccount class ...
     public class CreditAccount : IAccount, IWithdrawable
     {
-
+        public string AccountNumber { get; private set; }
+        public decimal Balance { get; private set; }
+        public decimal CreditLimit { get; private set; }
     }
 
         internal class Program
