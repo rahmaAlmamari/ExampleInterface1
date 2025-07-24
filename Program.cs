@@ -66,6 +66,13 @@
         public string AccountNumber { get; private set; }
         public decimal Balance { get; private set; }
         public decimal CreditLimit { get; private set; }
+
+        public CreditAccount(string accountNumber, decimal creditLimit)
+        {
+            AccountNumber = accountNumber;
+            CreditLimit = creditLimit;
+            Balance = -CreditLimit;
+        }
     }
 
         internal class Program
