@@ -39,6 +39,21 @@
             Console.WriteLine($"Deposited {amount:C} to savings account. New balance: { Balance: C}"); 
         }
 
+        public void Withdraw(decimal amount)
+        {
+            if (amount <= Balance)
+            {
+                Balance -= amount;
+                Console.WriteLine($"Withdrew {amount:C} from savings account. New balance:  { Balance: C} "); 
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds for withdrawal.");
+            }
+        }
+
+
+
     }
         internal class Program
     {
