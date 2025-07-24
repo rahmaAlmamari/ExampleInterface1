@@ -21,7 +21,11 @@
     }
     //4. 
     public class SavingsAccount : IAccount, IWithdrawable, IInterestBearing
-    { }
+    {
+        public string AccountNumber { get; private set; }
+        public decimal Balance { get; private set; }
+        public decimal InterestRate { get; set; }
+    }
         internal class Program
     {
         static void Main(string[] args)
