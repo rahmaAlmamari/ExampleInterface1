@@ -32,6 +32,13 @@
             Balance = initialBalance;
             InterestRate = interestRate;
         }
+
+        public void Deposit(decimal amount)
+        {
+            Balance += amount;
+            Console.WriteLine($"Deposited {amount:C} to savings account. New balance: { Balance: C}"); 
+        }
+
     }
         internal class Program
     {
