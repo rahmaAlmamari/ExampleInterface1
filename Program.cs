@@ -11,6 +11,7 @@
     //2. IWithdrawable interface ...
     public interface IWithdrawable
     {
+        void Withdraw(decimal amount);
     }
     internal class Program
     {
